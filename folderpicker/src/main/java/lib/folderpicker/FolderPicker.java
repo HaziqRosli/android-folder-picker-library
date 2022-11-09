@@ -89,10 +89,10 @@ public class FolderPicker extends Activity {
 
 		// Checks the orientation of the screen
 		if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-			//Toast.makeText(this, "landscape", Toast.LENGTH_SHORT).show();
-			 setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+			Toast.makeText(this, "landscape", Toast.LENGTH_SHORT).show();
+			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 		} else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){
-			//Toast.makeText(this, "portrait", Toast.LENGTH_SHORT).show();
+			Toast.makeText(this, "portrait", Toast.LENGTH_SHORT).show();
 			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 		}
 	}
