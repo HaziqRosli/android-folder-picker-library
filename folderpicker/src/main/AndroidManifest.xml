@@ -10,7 +10,6 @@
         <activity
             android:name=".FolderPicker"
 			android:screenOrientation="fullSensor"  
-			android:configChanges="orientation|screenSize|layoutDirection"
 			/>
     </application>
 

@@ -83,6 +83,7 @@ public class FolderPicker extends Activity {
 
     }
 
+
 	@Override
 	public void onConfigurationChanged(Configuration newConfig) {
 		super.onConfigurationChanged(newConfig);
@@ -90,12 +91,15 @@ public class FolderPicker extends Activity {
 		// Checks the orientation of the screen
 		if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
 			Toast.makeText(this, "landscape", Toast.LENGTH_SHORT).show();
-			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+			//setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 		} else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){
 			Toast.makeText(this, "portrait", Toast.LENGTH_SHORT).show();
-			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+			//setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+		} else{
+			Toast.makeText(this, "Someother " + newConfig.orientation, Toast.LENGTH_SHORT).show();
 		}
 	}
+
 
     /* Checks if external storage is available to at least read */
     boolean isExternalStorageReadable() {
