@@ -84,6 +84,7 @@ public class FolderPicker extends Activity {
     }
 
 
+	/*
 	@Override
 	public void onConfigurationChanged(Configuration newConfig) {
 		super.onConfigurationChanged(newConfig);
@@ -99,6 +100,7 @@ public class FolderPicker extends Activity {
 			Toast.makeText(this, "Someother " + newConfig.orientation, Toast.LENGTH_SHORT).show();
 		}
 	}
+	*/
 
 
     /* Checks if external storage is available to at least read */
