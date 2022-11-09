@@ -18,6 +18,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+import android.content.res.Configuration;
+import android.content.pm.ActivityInfo;
+
 public class FolderPicker extends Activity {
 
     //Folders and Files have separate lists because we show all folders first then files
@@ -79,6 +82,20 @@ public class FolderPicker extends Activity {
         loadLists(location);
 
     }
+
+	@Override
+	public void onConfigurationChanged(Configuration newConfig) {
+		super.onConfigurationChanged(newConfig);
+
+		// Checks the orientation of the screen
+		if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+			//Toast.makeText(this, "landscape", Toast.LENGTH_SHORT).show();
+			 setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+		} else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){
+			//Toast.makeText(this, "portrait", Toast.LENGTH_SHORT).show();
+			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+		}
+	}
 
     /* Checks if external storage is available to at least read */
     boolean isExternalStorageReadable() {
